@@ -1,6 +1,6 @@
 // ESM
 import Fastify from 'fastify'
-import routes from './routes.js'
+import routes from './routes/routes.js'
 import dbPlugin from './plugins/database.plugin.js'
 
 import 'dotenv/config'
