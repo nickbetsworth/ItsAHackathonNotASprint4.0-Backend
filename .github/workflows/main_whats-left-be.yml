@@ -70,4 +70,6 @@ jobs:
         with:
           app-name: 'whats-left-be'
           slot-name: 'Production'
+          package: './release.zip'
+          
           
