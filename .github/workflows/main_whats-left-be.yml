@@ -68,7 +68,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'whats-left-be'
+          app-name: 'whats_left_be'
           slot-name: 'Production'
           package: .
           
