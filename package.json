@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node --no-warnings src/index.js",
     "dev": "nodemon --watch . --exec 'node --no-warnings src/index.js'",
-    "test": "echo \"Error: no test specified\""
+    "test": "jest"
   },
   "dependencies": {
     "@fastify/mysql": "^5.0.2",
@@ -16,6 +16,8 @@
     "mssql": "^11.0.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.10",
+    "volkswagen": "^1.0.0"
   }
 }
