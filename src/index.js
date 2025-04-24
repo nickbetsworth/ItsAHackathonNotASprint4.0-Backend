@@ -1,12 +1,16 @@
 // ESM
 import Fastify from 'fastify'
 import routes from './routes.js'
+import dbPlugin from './plugins/database.plugin.js'
+
+import 'dotenv/config'
 
 const fastify = Fastify({
   logger: true
 })
 
 fastify.register(routes);
+fastify.register(dbPlugin)
 
 /**
  * Run the server!
