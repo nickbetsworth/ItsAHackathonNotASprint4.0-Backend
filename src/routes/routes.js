@@ -7,10 +7,6 @@ import { forecastBalance } from "../forecasting/forecastBalance.js";
 import { getAccount, getRegularPayments } from "../model/accounts.js";
 
 function routes (fastify, options) {
-  fastify.get('', async (request, reply) => {
-    return { hello: 'world' }
-  })
-
   fastify.get('/account/:accountId', async (request, reply) => {
     try {
       const account = await getAccount(fastify.dbClient, request.params.accountId);
@@ -21,6 +17,7 @@ function routes (fastify, options) {
         balance: account.balance,
         account_name: account.account_name,
         forecast_balance: forecastBalance(account.balance, payments),
+        next_incoming_payment: payments.filter(payment => payment.type === 'incoming').at(0),
       }
     } catch (error) {
       reply.status(404).send({ error: 'Account not found' });

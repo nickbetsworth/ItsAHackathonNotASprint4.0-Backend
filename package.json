@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "name": "whats-left-server",
+  "name": "whats-left-be",
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
